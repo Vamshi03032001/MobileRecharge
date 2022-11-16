@@ -7,16 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/action_page.php">
+<form action="showData">
  enter phone number:<input type="text" name="phonenumber"><br><br>
-  <label for="cars">Choose operator:</label>
+  
   <select name="operator" id="operator">
-    <option value="jio">jio</option>
-    <option value="airtel">airtel</option>
-    <option value="idea">idea</option>
+    <option value="1">jio</option>
+    <option value="2">airtel</option>
+    <option value="3">idea</option>
   </select>
   <br><br>
   <input type="submit" value="Submit">
 </form>
+
 </body>
 </html>
