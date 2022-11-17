@@ -1,17 +1,21 @@
 package com.example.demo.model;
 import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 @Entity
 public class Bill {
 	
 	@Id 
 	@Column(name="TransactionId")
-	private Long tId;
-	private int mobileNumber;
+	@GeneratedValue(generator="trans_seq",strategy=GenerationType.SEQUENCE)
+	@SequenceGenerator(name = "trans_seq",initialValue=10000,allocationSize=1)
+	private  Long tId ;
+	private long mobileNumber;
 	private int offerId;
 	
 	public Bill() {
@@ -25,10 +29,10 @@ public class Bill {
 	public Long gettId() {
 		return tId;
 	}
-	public int getMobileNumber() {
+	public long getMobileNumber() {
 		return mobileNumber;
 	}
-	public void setMobileNumber(int mobileNumber) {
+	public void setMobileNumber(long mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 	public int getOfferId() {

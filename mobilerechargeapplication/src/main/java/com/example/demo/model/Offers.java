@@ -16,7 +16,6 @@ public class Offers {
 	private String data;
 	private int price;
 	@ManyToOne
-	
 	private Operator operator;
 	
 	public Offers(int planId, int validity, int talktime, String data, int price, Operator operator) {

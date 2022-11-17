@@ -7,9 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="showData">
+<form action="showData" method="post">
  enter phone number:<input type="text" name="phonenumber"><br><br>
   
+  select Operator :
   <select name="operator" id="operator">
     <option value="1">jio</option>
     <option value="2">airtel</option>
